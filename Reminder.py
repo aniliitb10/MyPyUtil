@@ -12,7 +12,7 @@ def display_po_up(text, title="Alert"):
     ctypes.windll.user32.MessageBoxW(0, text, title, 0x00001000)
 
 
-with open(logFileName, 'a') as logFileHandlerInWriteMode:
+with open(logFileName, 'w') as logFileHandlerInWriteMode:
     logFileHandlerInWriteMode.write("Started the script at: " + datetime.now().time().isoformat() + "\n")
 
 while datetime.now().time().hour < 21:
